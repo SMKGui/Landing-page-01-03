@@ -1,3 +1,9 @@
+/* import da fonte */
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
 /* reset css */
 * {
     margin: 0;
@@ -5,10 +11,92 @@
     box-sizing: border-box;
 }
 
-
-body{
-    background-color: aqua;
+/* apenas para centralizar conteúdos */
+.layout-grid{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 3px solid green; */
 }
-header *{
-    border: ;
+
+header{
+    background-color: #f9003d;
+    height: 60px;
+}
+
+/* flexbox no cabeçalho */
+header .header-flex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    border: 2px solid white;
+}
+
+header nav a {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid green;
+    font-family: "Bebas Neue";
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ao passar o mouse */
+header nav a:hover{
+    background-color: white;
+    color: #f9003d;
+}
+
+main{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main */
+main .banner{
+    width: 100%;
+    height: 740px;
+    color: white;
+
+    background-position: bottom;
+    background-size: cover;
+    background-image: url(../assets/images/assets_/imagem-fundo-banner.png);
+    background-repeat: no-repeat;   
+}
+
+main .banner-flex{
+    display: flex;
+    align-items: center;
+}
+
+main .banner #bannerinfo{
+    width: 550px;
+    /* border: 2px solid yellow; */
+}
+
+main .banner #bannerinfo h1{
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    font-family: "bebas neue";
+    font-size: 96px;
+    border-bottom: #ffaf00 solid 2px;
+}
+
+main .banner #bannerinfo p{
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 53px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f9003d;
 }
